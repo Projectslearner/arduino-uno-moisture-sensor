@@ -53,19 +53,15 @@ This project utilizes an Arduino to monitor soil moisture levels using a soil mo
 2. **Automated Irrigation:** Implement automated irrigation systems based on soil moisture levels.
 3. **Research:** Conduct experiments or studies involving soil moisture monitoring.
 
-## Support
-
-For any issues or further assistance, please contact us:
-
-- 🌐 [Projects Learner](https://projectslearner.com)
-- 📧 Email: projectslearner@gmail.com
-- 📸 Instagram
-- 📘 Facebook
-- ▶️ YouTube
-- 📘 LinkedIn
-
-Made for you with ❣️ from ProjectsLearner.
-
 ---
 
-This project enables effective monitoring of soil moisture levels using an Arduino, providing valuable insights for various agricultural and research applications.
+### Whether you're working on electronics projects, IoT applications, or robotics innovations, Projects Learner is your go-to platform for guidance and expertise.
+
+🌐 [projectslearner.com](https://www.projectslearner.com)  
+📧 [projectslearner@gmail.com](mailto:projectslearner@gmail.com)  
+📸 [Instagram](https://www.instagram.com/projectslearner/)  
+📘 [Facebook](https://www.facebook.com/projectslearner)  
+▶️ [YouTube](https://www.youtube.com/@ProjectsLearner)  
+📘 [LinkedIn](https://www.linkedin.com/in/projectslearner)  
+
+## Made for you with ❣️ from ProjectsLearner
