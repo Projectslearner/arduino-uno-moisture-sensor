@@ -1,67 +1,59 @@
-# Soil Moisture Monitoring with Arduino
+# Arduino Uno Soil Moisture Sensor
 
-## Description
+#### Project Overview
 
-This project utilizes an Arduino to monitor soil moisture levels using a soil moisture sensor. The sensor's analog output is read by the Arduino, which then determines whether the soil is dry or wet based on a predefined threshold value. Additionally, an LED is used to visually indicate the soil moisture level, with brightness corresponding to the sensor reading.
+This project demonstrates how to use a soil moisture sensor with an Arduino Uno to monitor soil moisture levels. The sensor's readings are mapped to a percentage value representing the moisture content, which is then displayed on the Serial Monitor.
 
-## Components Needed
+#### Components Needed
 
-1. **Arduino UNO**
-2. **Soil Moisture Sensor**
-3. **LED**
-4. **Resistor (for LED)**
-5. **Jumper Wires**
-6. **Breadboard**
+- **Arduino Uno**
+- **Soil Moisture Sensor**
+- **Jumper Wires**
+- **Breadboard**
 
-## Circuit Wiring
+#### Block diagram
 
-1. **Soil Moisture Sensor:**
-   - Connect the **VCC** pin to the **5V** pin on the Arduino.
-   - Connect the **GND** pin to the **GND** pin on the Arduino.
-   - Connect the **A0** pin to analog pin **A0** on the Arduino.
 
-2. **LED (Optional Visual Indicator):**
-   - Connect the **anode (longer leg)** to digital pin **6** on the Arduino.
-   - Connect the **cathode (shorter leg)** to a current-limiting resistor, then to **GND**.
+#### Circuit Setup
 
-## Instructions
+1. **Connect Soil Moisture Sensor to Arduino Uno:**
+   - VCC pin of the sensor: Connect to 5V on Arduino.
+   - GND pin of the sensor: Connect to GND on Arduino.
+   - Analog output pin of the sensor: Connect to analog pin A0 on Arduino.
 
-1. **Upload the Code:**
-   - Copy and paste the provided code into the Arduino IDE.
-   - Verify and upload the code to your Arduino board.
+#### Instructions
 
-2. **Monitor the Output:**
-   - Open the Serial Monitor to view the analog sensor values and soil moisture status (dry or wet).
+1. **Circuit Setup:**
+   - Wire up the soil moisture sensor to the Arduino Uno as per the circuit setup section.
 
-## Project Operation
+2. **Code Upload:**
+   - Open the Arduino IDE and create a new sketch.
+   - Copy and paste the provided Arduino code into the sketch.
 
-- **Initialization:**
-  - The Arduino initializes serial communication at 9600 baud and sets the LED pin as an output, initially turned off.
+3. **Testing:**
+   - Upload the code to the Arduino Uno.
+   - Open the Serial Monitor in the Arduino IDE (set the baud rate to 9600).
+   - Observe the sensor value and moisture percentage readings.
 
-- **Reading Sensor Data:**
-  - The `readSensor()` function reads the analog value from the soil moisture sensor and maps it to an 8-bit value (0-255) for LED brightness control.
+#### Applications
 
-- **Determining Soil Moisture:**
-  - The Arduino compares the sensor value with a predefined threshold. If the sensor value is above the threshold, it indicates dry soil; otherwise, it indicates wet soil.
+- **Agriculture:** Monitor soil moisture levels to optimize irrigation.
+- **Gardening:** Keep track of soil moisture to maintain healthy plants.
+- **Automated Systems:** Integrate with other systems for automated watering based on soil moisture.
 
-- **LED Feedback:**
-  - An LED provides visual feedback, with brightness varying according to the soil moisture level. Higher brightness indicates drier soil.
+#### Notes
 
-## Applications
-
-1. **Gardening:** Monitor soil moisture to optimize watering schedules for plants.
-2. **Automated Irrigation:** Implement automated irrigation systems based on soil moisture levels.
-3. **Research:** Conduct experiments or studies involving soil moisture monitoring.
+- Ensure proper calibration of the sensor to get accurate moisture readings.
+- Adjust the mapping function in the code if the sensor's range differs.
+- Regularly clean the sensor to prevent corrosion and ensure longevity.
 
 ---
 
-### Whether you're working on electronics projects, IoT applications, or robotics innovations, Projects Learner is your go-to platform for guidance and expertise.
-
-🌐 [projectslearner.com](https://www.projectslearner.com)  
+🌐 [ProjectsLearner](https://projectslearner.com/learn/arduino-uno-soil-moisture-sensor)  
 📧 [projectslearner@gmail.com](mailto:projectslearner@gmail.com)  
 📸 [Instagram](https://www.instagram.com/projectslearner/)  
 📘 [Facebook](https://www.facebook.com/projectslearner)  
 ▶️ [YouTube](https://www.youtube.com/@ProjectsLearner)  
-📘 [LinkedIn](https://www.linkedin.com/in/projectslearner)  
+📘 [LinkedIn](https://www.linkedin.com/in/projectslearner)
 
-## Made for you with ❣️ from ProjectsLearner
+Crafted with ❤️ by ProjectsLearner

@@ -1,43 +1,32 @@
 /*
-    Code by : Projects_learner
-    Project name : Soil Moisture using Ardino UNO
-    Modified Date : 08-06-2024
+    Project name : Arduino Uno Soil Moisture Sensor
+    Modified Date: 29-06-2024
+    Code by : Projectslearner
     Website : https://projectslearner.com/learn/arduino-uno-soil-moisture-sensor
 */
 
-#define ledPin 6
-#define sensorPin A0
-#define threshold 300 // Threshold value for soil moisture
+// Define the pin connected to the soil moisture sensor
+const int soilMoistureSensorPin = A0;
 
-void setup() 
-{
+void setup() {
+  // Initialize serial communication for debugging
   Serial.begin(9600);
-  pinMode(ledPin, OUTPUT);
-  digitalWrite(ledPin, LOW);
 }
 
-void loop()
- {
-  int sensorValue = readSensor();
-  Serial.print("Analog output: ");
-  Serial.println(sensorValue);
+void loop() {
+  // Read the value from the soil moisture sensor
+  int sensorValue = analogRead(soilMoistureSensorPin);
 
-  // Check soil condition
-  if (sensorValue > threshold) 
-  {
-    Serial.println("Soil is dry");
-  } else {
-    Serial.println("Soil is wet");
-  }
+  // Map the sensor value to a percentage (0-100)
+  int moisturePercentage = map(sensorValue, 0, 1023, 100, 0);
 
-  delay(500);
-}
+  // Print the sensor value and moisture percentage to the Serial Monitor
+  Serial.print("Sensor Value: ");
+  Serial.print(sensorValue);
+  Serial.print("  |  Moisture Percentage: ");
+  Serial.print(moisturePercentage);
+  Serial.println("%");
 
-// This function returns the analog data to the calling function
-int readSensor() 
-{
-  int sensorValue = analogRead(sensorPin);  // Read the analog value from sensor
-  int outputValue = map(sensorValue, 0, 1023, 255, 0); // Map the 10-bit data to 8-bit data
-  analogWrite(ledPin, outputValue); // Generate PWM signal
-  return sensorValue;  // Return analog moisture value
+  // Add a small delay to avoid flooding the Serial Monitor
+  delay(1000);
 }
